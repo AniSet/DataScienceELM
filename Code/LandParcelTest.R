@@ -4,8 +4,11 @@
 # Libs
 # install.packages("sf")
 library(sf) 
+# install.packages("dplyr")
 library(dplyr)
+# install.packages("rgdal")
 library(rgdal)
+# install.packages("ggplot2")
 library(ggplot2)
 
 #Get land parcels.
