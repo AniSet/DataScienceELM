@@ -3,7 +3,7 @@
 
 # Libs
 # install.packages("sf")
-library(sf) 
+library(sf)
 # install.packages("dplyr")
 library(dplyr)
 # install.packages("rgdal")
@@ -12,7 +12,7 @@ library(rgdal)
 library(ggplot2)
 
 #Get land parcels.
-inputfilepath = "landparcels/HMLR_Exeter_Extract_int_LPIS.json"
+inputfilepath = "Data/HMLR_Exeter_Extract_int_LPIS.json"
 #inputfilepath = "landparcels/HMLR_Poly_Sample_JOIN_int_LPIS.json"
 sf_lp <- st_read(inputfilepath, quiet = TRUE)
 
