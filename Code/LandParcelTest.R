@@ -11,12 +11,15 @@ library(rgdal)
 # install.packages("ggplot2")
 library(ggplot2)
 
-#Get land parcels.
+# Get land parcels
 inputfilepath = "Data/HMLR_Exeter_Extract_int_LPIS.json"
-#inputfilepath = "landparcels/HMLR_Poly_Sample_JOIN_int_LPIS.json"
 sf_lp <- st_read(inputfilepath, quiet = TRUE)
+  # check data
+  plot(st_geometry(sf_lp))
 
-#Want an 'auxillary data set' which has the land parcel title number and some random number we will use as pretend enivronmental data.
+  
+  
+# Want an 'auxillary data set' which has the land parcel title number and some random number we will use as pretend enivronmental data.
 lp_luck = data.frame("TITLE_NO"=sf_lp$TITLE_NO, "luck"=runif(sf_lp$OBJECTID,0,100))
 
 outputfilepath = paste(tools::file_path_sans_ext(inputfilepath),".csv")
